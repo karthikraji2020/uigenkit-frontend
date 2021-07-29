@@ -89,7 +89,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/script.js",
+              "src/assets/linearGradient.js",
+              "src/assets/neumorphism.js"
+            ]
           }
         },
         "lint": {
