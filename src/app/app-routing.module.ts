@@ -8,6 +8,8 @@ const routes: Routes = [
   { path: 'neumorphism', loadChildren: () => import('./neumorphism/neumorphism.module').then(m => m.NeumorphismModule) },
   { path: 'lineargradient', loadChildren: () => import('./linear-gradient/linear-gradient.module').then(m => m.LinearGradientModule) },
   { path: 'imageoptimizer', loadChildren: () => import('./image-optimizer/image-optimizer.module').then(m => m.ImageOptimizerModule) },
+  { path: 'colorpalate', loadChildren: () => import('./color-palate/color-palate.module').then(m => m.ColorPalateModule) },
+  { path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule) },
   { path:"**",component:PageNotFoundComponent}
 
 ];

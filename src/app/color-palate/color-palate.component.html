@@ -1,0 +1,176 @@
+
+<div class="colorPalette">
+    <div class="inner-header flex">
+      <div class="container home-banner shadow-lg">
+        <h2 class="headerTitle">color pallete</h2>
+     
+        <div class="row">
+       <div class="colorFormat">
+        </div> 
+
+          <div class="showQuote">
+              <div class="grid grid1" onclick="CopyColorToClipboard(this)">
+                <section class="grid1ColorCode"></section>
+              </div>
+              <div class="grid grid2" onclick="CopyColorToClipboard(this)">
+                <section class="grid2ColorCode"></section>
+              </div>
+              <div class="grid grid3" onclick="CopyColorToClipboard(this)">
+                <section class="grid3ColorCode"></section>
+              </div>
+              <div class="grid grid4" onclick="CopyColorToClipboard(this)">
+                <section class="grid4ColorCode"></section>
+              </div>
+          </div>
+
+        </div>
+        <div class="row my-2">
+          <div class="col-md-3"></div>
+          <div class="col-sm-12 col-md-6 ">
+          <div class="bg-light shadow">
+            <div class="df-switch" onclick="togglePalette()">
+              <button type="button" class="btn btn-lg btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <div class="inner-handle"></div>
+                <div class="handle"></div>
+              </button>
+            </div>
+          </div>
+          </div>
+          <div class="col-md-3">
+            <b class=" text-dark color-sheme-title">ColorFormat </b>
+          <div class="btn-group  btn-group-toggle text-light " id="colorFormatBtnGroup" data-toggle="buttons">
+            <label class="btn btn-dark active">
+              <input type="radio"  name="colorFormat" onclick="handleClick(this);" id="hex" autocomplete="off" value="hex" checked>HEX
+            </label>
+            <label class="btn btn-dark">
+              <input type="radio"  name="colorFormat" onclick="handleClick(this);" id="rgb" autocomplete="off" value="rgb" >RGB
+            </label>
+            <label class="btn btn-dark">
+              <input type="radio"  name="colorFormat" onclick="handleClick(this);" id="rgba" autocomplete="off" value="rgba"> RGBA
+            </label>
+          </div>
+        </div>
+        </div>
+       
+        <div class="row my-2  py-2 colorSchemeSelection">
+          <div class="col-sm-12  col-md-6 offset-md-3">
+          <div class="bg-light shadow  py-2">
+            <!-- <div class="col-sm-6"> -->
+              <b class=" text-dark color-sheme-title">ColorScheme </b>
+
+              <div class="btn-group  btn-group-toggle text-light " id="colorSchemeBtnGroup" data-toggle="buttons">
+                <label class="btn btn-dark">
+                  <input type="radio"  name="colorScheme" onclick="changeCurrentColorScheme(this.value)" id="monochromatic" autocomplete="off" value="monochromatic" checked>Monochromatic
+                </label>
+                <label class="btn btn-dark ">
+                  <input type="radio"  name="colorScheme" onclick="changeCurrentColorScheme(this.value);" id="dirtectComplementry" autocomplete="off" value="dirtectComplementry">DirtectComplementry
+                </label>
+                <label class="btn btn-dark">
+                  <input type="radio"  name="colorScheme" onclick="changeCurrentColorScheme(this.value);" id="acromatic" autocomplete="off" value="acromatic"> Acromatic
+                </label>
+              <!-- </div> -->
+            </div>
+          </div>
+          </div>
+        </div>
+       
+        <div class="row">
+          <div class="col-sm-9">
+            <div class="card shadow" id="randomPaletteGenarator">
+            </div>
+            <div class="card shadow" id="customPaletteGenarator">
+              <div class="card shadow">
+              <div class="card-body custom">
+                <h4 class="card-title text-left text-capitalize">custom Generator</h4>
+              <h6 class="layer1" onclick="showPicker(this)"><figcaption> Click Here</figcaption></h6>
+              <h6 class="layer2" onclick="showPicker(this)"><figcaption> Click Here</figcaption></h6>
+              <h6 class="layer3" onclick="showPicker(this)"><figcaption> Click Here</figcaption></h6>
+              <h6 class="layer4" onclick="showPicker(this)"><figcaption> Click Here</figcaption></h6>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-dark float-right" onclick="savePalette('custom')" title="Save Palette"><i class="fa fa-save"></i>  save</button>
+              <button class="btn btn-danger float-right mx-2" onclick="resetCustomPaletteGenarator()" title="Clear Palette"><i class="fa fa-refresh"></i> Clear</button>
+              </div>
+            </div>
+            </div>
+          
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-2 align-self-start">
+            <h6 class="text-center py-2">Color Picker</h6>
+            <div class="createPalette-color-picker">
+            </div>
+          </div>
+        </div>
+        <div class="row my-2">
+          <div class="col-md-6">
+          <!-- <div>Selected directions  <span id="selectedValSortedBy"></span></div> -->
+          </div>
+         <div class="col-md-6 load-more">
+           <div class="btn-group  btn-group-toggle text-light " id="sortBy" data-toggle="buttons">
+            <h5 class=" text-dark ">SortedBy :</h5> &nbsp;
+            <label class="btn btn-dark active">
+              <input type="radio"  name="sortBy" onclick="sortBy(this);" id="likes" autocomplete="off" value="likes" ><i class="fa fa-heart"></i> Likes 
+            </label>
+            <label class="btn btn-dark ">
+              <input type="radio"  name="sortBy" onclick="sortBy(this);" id="createdat" autocomplete="off" value="createdat" checked><i class="fa fa-clock-o"></i> Created At 
+            </label>
+          </div>
+         </div>
+       </div>
+        <div class="row">
+          
+          <div class="card-group customColorPalette">
+      
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9"></div>
+         <div class="col-sm-3 load-more">
+         </div>
+       </div>
+        <br>
+
+        <h2 class="bg-dark text-white">Social Media Colors</h2>
+        <!-- ejs for each -->
+        <div class="card-group socialPalette">
+      
+      </div>
+      <div style="display: none;">
+        <canvas  width="1280px" height="650px" id="paletteCanvas"></canvas> 
+        <canvas width="1280px" height="650px" id="colorPalette"></canvas>
+        <aside id="colorConversion"> </aside>
+      </div>
+      </div>
+<button onclick="gotoTopFunction()" id="gotoTop" title="Go to top"><i class="fa fa-angle-double-up"></i></button>
+
+    </div>
+  </div>
+
+<script>
+  //Get the button
+var mybutton = document.getElementById("gotoTop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunctionUpDown()};
+
+function scrollFunctionUpDown() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function gotoTopFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+  <script src="/js/colorPalette.js"></script>
+
+
+ 
+
+ 
