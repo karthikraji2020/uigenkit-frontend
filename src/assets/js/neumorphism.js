@@ -261,7 +261,7 @@ function getBoxShadow() {
 toggleInset.apply();
 setTimeout(() => {
   changePositionTo("145deg");
-}, 800);
+}, 8000);
 
 const copyText = (e) => {
   // debugger;

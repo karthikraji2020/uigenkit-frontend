@@ -87,12 +87,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/neumorphism.css"
+
             ],
             "scripts": [
-              "src/assets/script.js",
-              "src/assets/linearGradient.js",
-              "src/assets/neumorphism.js"
+              "src/assets/js/script.js",
+              "src/assets/js/linearGradient.js",
+              "src/assets/js/neumorphism.js",
+              "src/assets/js/colorPalette.js"
+
             ]
           }
         },

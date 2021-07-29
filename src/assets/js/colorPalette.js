@@ -511,6 +511,9 @@ function hexToRGB(hexvalue) {
   return rbgvalue;
 }
 
+function test (){
+  console.log("test log");
+}
 
 $(window).resize(function () {
   let colorSchemeBtnGroup = document.getElementById('colorSchemeBtnGroup');

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+ declare var hexToRGB:any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'uigenkit-frontend';
+
+  constructor() { }
+  
+  ngOnInit(): void {
+  }
+  // ngAfterViewInit(){
+  //   setTimeout(() => {
+  //        hexToRGB('#212120');
+  //   },3000);
+
 }
+
